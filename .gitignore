@@ -2,3 +2,7 @@
 # for java and Inteliji
 *.class
 Coursera/.idea
+
+
+# week4 contains a lot of test files
+Coursera/files/week4
