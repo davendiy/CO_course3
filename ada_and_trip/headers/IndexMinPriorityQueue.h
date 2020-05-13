@@ -1,5 +1,5 @@
 // Created by David Zashkolny on 03.05.2020.
-// 2 course, comp math
+// 3 course, comp math
 // Taras Shevchenko National University of Kyiv
 // email: davendiy@gmail.com
 //
@@ -24,9 +24,9 @@ typedef struct IndexMinPq {
 
 IndexMinPq* createIndexMinPq(PQ_INDEX_TYPE capacity);
 
-int8_t isEmptyPQ(IndexMinPq* minPq);
+char isEmptyPQ(IndexMinPq* minPq);
 
-int8_t contains(IndexMinPq* minPq, PQ_INDEX_TYPE i);
+char contains(IndexMinPq* minPq, PQ_INDEX_TYPE i);
 
 PQ_INDEX_TYPE size(IndexMinPq* minPq);
 

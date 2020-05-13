@@ -1,5 +1,5 @@
 // Created by David Zashkolny on 02.05.2020.
-// 2 course, comp math
+// 3 course, comp math
 // Taras Shevchenko National University of Kyiv
 // email: davendiy@gmail.com
 //
@@ -23,7 +23,7 @@ typedef struct MinHeap {
     HEAP_INDEX_TYPE  heap_size;
     MinHeapEl (*getMin)(void);
     MinHeapEl (*getMax)(void);
-    int8_t (*compare)(MinHeapEl a, MinHeapEl b);
+    char (*compare)(MinHeapEl a, MinHeapEl b);
     void (*delete)(MinHeapEl* harr, HEAP_INDEX_TYPE heap_size);
 } MinHeap;
 
@@ -41,7 +41,7 @@ HEAP_INDEX_TYPE right(HEAP_INDEX_TYPE i);
 // to extract the root which is the minimum element
 MinHeapEl extractMin(MinHeap* minHeap);
 
-int8_t isEmptyMinHeap(MinHeap* minHeap);
+char isEmptyMinHeap(MinHeap* minHeap);
 
 // Decreases key value of key at index i to new_val
 void decreaseKeyMinHeap(MinHeap* minHeap, HEAP_INDEX_TYPE i, MinHeapEl new_val);
@@ -65,7 +65,7 @@ typedef struct IntPair {
     int data;
 } IntPair;
 
-static int8_t compareIntPair(MinHeapEl x, MinHeapEl y);
+static char compareIntPair(MinHeapEl x, MinHeapEl y);
 
 static MinHeapEl getMinIntPair();
 

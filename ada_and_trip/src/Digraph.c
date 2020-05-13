@@ -1,5 +1,5 @@
 // Created by David Zashkolny on 02.05.2020.
-// 2 course, comp math
+// 3 course, comp math
 // Taras Shevchenko National University of Kyiv
 // email: davendiy@gmail.com
 //
@@ -21,11 +21,15 @@ Digraph* createDigraph(VERTEX_TYPE V) {
     return graph;
 }
 
-
+/* Add a new Directed Edge to the graph. Complexity = O(1)
+ * @param from: index of the vertex-source
+ * @param to:   index of the vertex-destination
+ * @param weight: obviously
+ */
 void addEdge(Digraph *graph, VERTEX_TYPE from, VERTEX_TYPE to, WEIGHT_TYPE weight) {
     if (from >= graph->V || to >= graph->V) {
         if (from >= graph->V) fprintf(stderr, "Bad vertex number: %d\n", from);
-        else               fprintf(stderr, "Bad vertex number: %d\n", to);
+        else                  fprintf(stderr, "Bad vertex number: %d\n", to);
         return;
     }
 
@@ -38,7 +42,9 @@ void addEdge(Digraph *graph, VERTEX_TYPE from, VERTEX_TYPE to, WEIGHT_TYPE weigh
     graph->E++;
 }
 
-
+/* Delete the entire Digraph and free all its allocated memory.
+ * Complexity - O(V + E)
+ */
 void deleteGraph(Digraph *graph) {
     for (unsigned int i = 0; i < graph->V; i++) {
         deleteBag(graph->adj[i]);

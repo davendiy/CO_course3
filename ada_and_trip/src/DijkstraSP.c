@@ -1,5 +1,5 @@
 // Created by David Zashkolny on 02.05.2020.
-// 2 course, comp math
+// 3 course, comp math
 // Taras Shevchenko National University of Kyiv
 // email: davendiy@gmail.com
 //
@@ -47,7 +47,7 @@ static void relax(DijkstraRet* self, DirectedEdge* e){
     }
 };
 
-int8_t hasPathTo(DijkstraRet* self, VERTEX_TYPE v){
+char hasPathTo(DijkstraRet* self, VERTEX_TYPE v){
     return self->distTo[v] != INT_MAX;
 }
 

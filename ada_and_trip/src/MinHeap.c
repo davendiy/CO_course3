@@ -1,5 +1,5 @@
 // Created by David Zashkolny on 02.05.2020.
-// 2 course, comp math
+// 3 course, comp math
 // Taras Shevchenko National University of Kyiv
 // email: davendiy@gmail.com
 //
@@ -104,14 +104,14 @@ void deleteHeap(MinHeap* minHeap) {
     free(minHeap);
 }
 
-int8_t isEmptyMinHeap(MinHeap* minHeap) {
+char isEmptyMinHeap(MinHeap* minHeap) {
     return minHeap->heap_size == 0;
 }
 
 
 // ----------------------- MinHeap with integer pairs -------------------------
 
-static int8_t compareIntPair(MinHeapEl x, MinHeapEl y) {
+static char compareIntPair(MinHeapEl x, MinHeapEl y) {
     IntPair *_x = (IntPair*) x;
     IntPair *_y = (IntPair*) y;
     if (_x->priority > _y->priority) return 1;
